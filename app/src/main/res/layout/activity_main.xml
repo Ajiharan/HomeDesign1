@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="22dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="22dp" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/home_logo"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Email Address"
+        android:padding="15dp"
+        android:textColorHint="@android:color/white"
+        android:textSize="18sp"
+        android:drawableTint="@android:color/white"
+        android:drawableRight="@drawable/ic_emai"
+        android:textColor="@android:color/white"
+        android:background="@drawable/layout_design"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo" />
+    <EditText
+        android:id="@+id/txt_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Password"
+        android:padding="15dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textColorHint="@android:color/white"
+        android:drawableTint="@android:color/white"
+        android:drawableRight="@drawable/ic_visibility"
+        android:background="@drawable/layout_design"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/txt_email" />
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:textAllCaps="false"
+        android:text="Login Now"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_button_layout"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/txt_password"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/txt_forgot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        android:text="forgot password?"
+        />
+    <View
+        android:id="@+id/footer_view"
+        android:layout_width="0dp"
+        android:background="#fff"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/footer_view"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="Don't have an account"
+        android:gravity="center_horizontal"
+        android:textColor="@color/login_form_details"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/face_login"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/white"
+        android:gravity="center_horizontal|center_vertical"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintBottom_toTopOf="@+id/footer_view"
+        android:layout_marginBottom="20dp"
+        android:padding="1dp"
+        android:textSize="17sp"
+        android:drawablePadding="4dp"
+        android:drawableTint="@android:color/white"
+        android:drawableStart="@drawable/face_login3"
+        android:text="Sign in with Facebook"
+        android:layout_height="0dp"/>
+    <View
+    android:id="@+id/viewline1"
+    android:layout_width="140dp"
+    android:background="#fff"
+    android:layout_height="1dp"
+    app:layout_constraintStart_toStartOf="@+id/guideline_left"
+    app:layout_constraintTop_toBottomOf="@+id/txt_forgot"
+    app:layout_constraintBottom_toTopOf="@+id/face_login"
+    />
+    <TextView
+        android:id="@+id/id_or"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:text="Or"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/viewline2"
+        app:layout_constraintStart_toEndOf="@+id/viewline1"
+        app:layout_constraintTop_toBottomOf="@+id/txt_forgot"
+        app:layout_constraintTop_toTopOf="@+id/viewline1"
+        android:textSize="17sp"
+        />
+    <View
+        android:id="@+id/viewline2"
+        android:layout_width="140dp"
+        android:background="#fff"
+        android:layout_height="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/txt_forgot"
+        app:layout_constraintBottom_toTopOf="@+id/face_login"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
